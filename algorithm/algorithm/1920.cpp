@@ -20,6 +20,7 @@ bool search(int r, int l, int find, int * arr) {
 }
 int main(void) {
 	ios::sync_with_stdio(false);
+	cin.tie(NULL);
 	int num, n, num2, k;
 	vector <int> list;
 	vector <int> result;
