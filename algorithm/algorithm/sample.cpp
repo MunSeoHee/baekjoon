@@ -1,10 +1,14 @@
 #include<iostream>
+#include <string>
 using namespace std;
-int main(void) {
-	int num, num1;
 
-	cin >> num >> num1;
-	cout << num << " " << num1;
+
+int main(void) {
+	ios::sync_with_stdio(false);
+	cin.tie(NULL);
+
+	system("PAUSE");
+
 
 	return 0;
 }
