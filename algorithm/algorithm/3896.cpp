@@ -1,20 +1,18 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-bool vec[1299710] = { true, };
+
 
 int main(void) {
 	ios::sync_with_stdio(false);
 	cin.tie(NULL);
 	vector<int> test_case;
-	int num,temp,strat=2,end=1299709;
-
-	vec[0] = false;
-
-	for (int i = 2; i <= 1299709; i++) {
-		if (vec[i-1] == 0)continue;
-		for (int j = 2; j*i <= 1299709; j++) {
-			vec[j*i - 1] = false;
+	int num,temp,strat,end;
+	bool * vec = new bool[1299710];
+	
+	for (int i = 2; i < 1299710; i++) {
+		for (int j = i; i*j>2 && i*j<1299710; j++) {
+			vec[j*i] = true;
 		}
 	}
 
@@ -25,22 +23,31 @@ int main(void) {
 		test_case.push_back(temp);
 	}
 
-
+	
 	for (int j = 0; j < test_case.size(); j++) {
-		for (int i = test_case[j]; i > 0; i--) {
-			if (vec[i - 1]) {
-				strat = i;
-				break;
+		int temp = test_case[j];
+		if (vec[temp] == true) {
+			strat = temp;
+			end = temp;
+			
+			while (true) {
+				if (vec[--strat]!= true) {
+					break;
+				}
 			}
-		}
-		for (int i = test_case[j]; i <= 1299709; i++) {
-			if (vec[i - 1]) {
-				end = i;
-				break;
+			
+			while (true) {
+				if (vec[++end]!= true) {
+					break;
+				}
 			}
+			
+			
+			cout << end - strat<<'\n';
 		}
-
-		cout << -(strat - end)<<'\n';
+		else {
+			cout << 0 << '\n';
+		}
 	}
 	
 	system("PAUSE");
