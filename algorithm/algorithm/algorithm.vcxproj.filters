@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="알고리즘 스터디">
+      <UniqueIdentifier>{118d619c-a0f3-4d5d-ae5c-ec8d42995cfc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="10817.cpp">
@@ -263,6 +266,36 @@
     </ClCompile>
     <ClCompile Include="2869.cpp">
       <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="10171.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="10950.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="10952.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1018.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1259.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1436.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1966.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="6_2 보글보글.cpp">
+      <Filter>알고리즘 스터디</Filter>
+    </ClCompile>
+    <ClCompile Include="6_3 소풍.cpp">
+      <Filter>알고리즘 스터디</Filter>
+    </ClCompile>
+    <ClCompile Include="6_5 게임판 덮기.cpp">
+      <Filter>알고리즘 스터디</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
