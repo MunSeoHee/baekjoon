@@ -1,12 +1,4 @@
-﻿  6_5 게임판 덮기.cpp
-c:\users\munseohee\desktop\백준 알고리즘\algorithm\algorithm\6_5 게임판 덮기.cpp(10): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-c:\users\munseohee\desktop\백준 알고리즘\algorithm\algorithm\6_5 게임판 덮기.cpp(11): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-c:\users\munseohee\desktop\백준 알고리즘\algorithm\algorithm\6_5 게임판 덮기.cpp(24): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-c:\users\munseohee\desktop\백준 알고리즘\algorithm\algorithm\6_5 게임판 덮기.cpp(28): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-c:\users\munseohee\desktop\백준 알고리즘\algorithm\algorithm\6_5 게임판 덮기.cpp(29): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-c:\users\munseohee\desktop\백준 알고리즘\algorithm\algorithm\6_5 게임판 덮기.cpp(43): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-c:\users\munseohee\desktop\백준 알고리즘\algorithm\algorithm\6_5 게임판 덮기.cpp(51): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-c:\users\munseohee\desktop\백준 알고리즘\algorithm\algorithm\6_5 게임판 덮기.cpp(52): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-c:\users\munseohee\desktop\백준 알고리즘\algorithm\algorithm\6_5 게임판 덮기.cpp(87): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-c:\users\munseohee\desktop\백준 알고리즘\algorithm\algorithm\6_5 게임판 덮기.cpp(88): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+﻿  7568.cpp
+c:\users\munseohee\desktop\백준 알고리즘\algorithm\algorithm\7568.cpp(9): warning C4101: 'y' :참조되지 않은 지역 변수입니다.
+c:\users\munseohee\desktop\백준 알고리즘\algorithm\algorithm\7568.cpp(9): warning C4101: 'x' :참조되지 않은 지역 변수입니다.
   algorithm.vcxproj -> C:\Users\MunSeoHee\Desktop\백준 알고리즘\algorithm\Debug\algorithm.exe

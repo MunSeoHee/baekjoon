@@ -4,7 +4,7 @@
 using namespace std;
 vector<vector<pair<int, int>>> block = { { {0,0},{0,1},{1,1} }, {{0,0},{0,1},{1,0}},{{0,0},{1,0},{1,1}},{{0,0},{1,0},{1,-1}} };
 //ㄱ, Γ, ㄴ, 」
-
+int c=0;
 int count_white(vector<string> vec) {
 	int count = 0;
 	for (int i = 0; i < vec.size(); i++) {
@@ -17,7 +17,7 @@ int count_white(vector<string> vec) {
 	return count;
 }
 
-int cover(vector<string> vec, int x, int y, int count) {
+void cover(vector<string> vec, int x, int y, int count) {
 	bool flag = true;
 
 	//블록이 4가지 종류를 각각 넣어봄
@@ -46,6 +46,9 @@ int cover(vector<string> vec, int x, int y, int count) {
 
 			}
 		}
+		if (count == 0) {
+			c++;
+		}
 		
 		//다음 흰색 칸 위치로 
 		for (int k = x; k < vec.size(); k++) {
@@ -63,7 +66,7 @@ int cover(vector<string> vec, int x, int y, int count) {
 			}
 		}
 	}
-	return count;
+	
 
 }
 int main(void) {
@@ -81,22 +84,20 @@ int main(void) {
 		}
 		white_count = count_white(vec);
 		if (white_count % 3 != 0) {
-			result = 0;
+			c = 0;
 		}
 		else {
 			for (int i = 0; i < vec.size(); i++) {
 				for (int j = 0; j < vec[i].size(); j++) {
 					if (vec[i][j] == '.') {
-						if (cover(vec, i, j, white_count) == 0) {
-							result++;
-
-						}
+						cover(vec, i, j, white_count);
 					}
 				}
 			}
 		}
 	}
-	cout << result << '\n';
+	cout << c << '\n';
+	c = 0;
 
 	system("PAUSE");
 
