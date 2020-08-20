@@ -20,7 +20,8 @@ int func(int x, int y) {
 				result[x][y] = func(nextX, nextY);
 			}
 			else {
-				result[x][y] += func(nextX, nextY);			}	
+				result[x][y] += func(nextX, nextY);			
+			}	
 		}
 	}
 	if (result[x][y] == -1) {
