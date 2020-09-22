@@ -1,66 +1,34 @@
 #include <iostream>
-#include <string>
-#include <stack>
 using namespace std;
 
-bool test = true;
-
-int main()
-{
-	stack<char> input;
-	char temp;
-	string a;//임시
-	getline(cin, a);
-
-	string stop = { '.' };//while에 사용됨
-	while (a != stop)
-	{
-		test = true;
-
-		for (int i = 0; i < a.length(); i++)
-		{
-			if (a[i] == '(')
-				input.push('(');
-
-			else if (a[i] == '[')
-				input.push('[');
-			else if (a[i] == '[')
-				input.push('[');
-			else if (a[i] == ']')
-			{
-				if (!input.empty() && input.top() == '[')
-					input.pop();
-				else
-				{
-					test = false;
-					break;
-				}
-			}
-			else if (a[i] == ')')
-			{
-				if (!input.empty() && input.top() == '(')
-					input.pop();
-				else
-				{
-					test = false;
-					break;
-				}
-			}
-
+int main() {
+	int kg, divv;
+	cin >> kg;
+	divv = kg / 5;
+	int cnt = 0;
+	int temp = 0;
+	while (divv >= 0) {
+		
+		if (divv > 0) {
+			temp = kg - 5 * divv;
+			cnt = divv;								
 		}
-		if (test == true && input.empty())
-		{
-			cout << "yes" << endl;
-
+		
+		if (temp == 0) {
+			cout << cnt;
+			break;
 		}
-		else
-		{
-			cout << "no" << endl;
-
+		else {
+			temp = -3;
+			if(temp!=0)
+				divv--;
 		}
-		a.clear();
-		getline(cin, a);
+		if (temp != 0) {
+			cout << -1;
+		}
+		
 	}
 
+	return 0;
 
 }
