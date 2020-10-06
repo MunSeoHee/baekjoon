@@ -1,34 +1,34 @@
-#include <iostream>
-using namespace std;
-
+#include<stdio.h>
 int main() {
-	int kg, divv;
-	cin >> kg;
-	divv = kg / 5;
-	int cnt = 0;
-	int temp = 0;
-	while (divv >= 0) {
-		
-		if (divv > 0) {
-			temp = kg - 5 * divv;
-			cnt = divv;								
+	//È¦¼ö ÁÙ Èò°ËÈò°Ë
+	//Â¦¼ö ÁÙ °ËÈò°ËÈò
+	//°ËÁ¤ È¦¼öÁÙ Â¦¼öÄ­,Â¦¼öÁÙ È¦¼öÄ­
+	//Èò È¦¼öÁÙ È¦¼ö, Â¥¼öÁÙ Â¦¼ö
+	char n[8];
+	char k[8];
+	int q = 0;
+	for (int i = 0; i < 4; i++)
+	{
+		for (int j = 0; j < 8; j++)
+		{
+			scanf_s("%c", &n[j]);//È¦¼ö ÁÙ
+			scanf_s("%c", &k[j]);//Â¦¼ö ÁÙ
+			if (j % 2 == 0)
+			{
+				if (n[j] == 'F')
+					q = q + 1;
+
+			}
+			else if (j % 2 != 0)
+			{
+				if (k[j] == 'F')
+					q = q + 1;
+
+			}
+
 		}
-		
-		if (temp == 0) {
-			cout << cnt;
-			break;
-		}
-		else {
-			temp = -3;
-			if(temp!=0)
-				divv--;
-		}
-		if (temp != 0) {
-			cout << -1;
-		}
-		
+
 	}
-
+	printf("%d", q);
 	return 0;
-
 }
