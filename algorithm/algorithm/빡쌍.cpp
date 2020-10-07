@@ -1,34 +1,22 @@
-#include<stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
 int main() {
-	//È¦¼ö ÁÙ Èò°ËÈò°Ë
-	//Â¦¼ö ÁÙ °ËÈò°ËÈò
-	//°ËÁ¤ È¦¼öÁÙ Â¦¼öÄ­,Â¦¼öÁÙ È¦¼öÄ­
-	//Èò È¦¼öÁÙ È¦¼ö, Â¥¼öÁÙ Â¦¼ö
-	char n[8];
-	char k[8];
-	int q = 0;
-	for (int i = 0; i < 4; i++)
+	int a[10] = { 0 };
+	int b, x, cnt = 0, imsi[10] = { 0 };
+
+	scanf_s("%d %d", &b, &x);
+	for (int i = 0; i < b; i++)
+		scanf_s("%d", &a[i]);
+
+	if (b >= 1 && x <= 10000)
 	{
-		for (int j = 0; j < 8; j++)
+		for (int j = 0; j < b; j++)
 		{
-			scanf_s("%c", &n[j]);//È¦¼ö ÁÙ
-			scanf_s("%c", &k[j]);//Â¦¼ö ÁÙ
-			if (j % 2 == 0)
-			{
-				if (n[j] == 'F')
-					q = q + 1;
-
+			if (a[j] < x) {
+				imsi[j] = a[j];
+				printf("%d ", imsi[j]);
 			}
-			else if (j % 2 != 0)
-			{
-				if (k[j] == 'F')
-					q = q + 1;
-
-			}
-
 		}
-
 	}
-	printf("%d", q);
-	return 0;
 }
