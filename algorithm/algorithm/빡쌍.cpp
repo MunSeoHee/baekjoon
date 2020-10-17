@@ -54,9 +54,11 @@ int check(char sentence[100])//check(확인할 문장), return 1(대칭인 문장) or 0(안
 int main()
 {
 	char sentence[100];//문장저장 
-	while (true)//여러 줄 입력 가능하게 입력하고 확인하는 전체 과정 loof 
+	while (1)//여러 줄 입력 가능하게 입력하고 확인하는 전체 과정 loof 
 	{
 		fgets(sentence, 100, stdin);//문장 저장 
+		if (sentence[0] == '.')
+			return 0;
 		if (check(sentence) == 0)//check()함수의 반환값이 0이면 no 
 			printf("no\n");
 		else//check()함수의 반환값이 1이면 yes 
