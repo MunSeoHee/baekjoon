@@ -5,35 +5,29 @@ using namespace std;
 int main(void) {
 	ios::sync_with_stdio(false);
 	cin.tie(NULL);
-	int N, M,result=0;
-	string S;
-	cin >> N >> M >> S;
-	string str = "I";
-	bool flag = true;
 
-	for (int i = 0; i < S.size()-(1+2*N);i++) {
-		if (S[i] == 'I') {
-			for (int j = i + 1; j < i + 2 * N; j+2) {
-				if (S[j] != 'O') {
-					flag = false;
-					break;
-				}
-			}
-			if (flag) {
-				for (int j = i + 2; j < i + 2 * N; j + 2) {
-					if (S[j] != 'I') {
-						flag = false;
-						break;
-					}
-				}
-			}
-			if (flag) {
+	int N, M,result=0, num=0;
+	string S;
+	cin >> N >> M ;
+
+	cin >> S;
+
+	
+	for (int i = 0; i < M - 2; i++) {
+		if (S[i] == 'I' && S[i + 1] == 'O' && S[i + 2] == 'I') {
+			num++;
+			if (num == N) {
 				result++;
+				num--;
 			}
+			i++;
 		}
-		flag = true;
+		else {
+			num = 0;
+		}
 	}
 	cout << result;
+	
 	system("PAUSE");
 
 
