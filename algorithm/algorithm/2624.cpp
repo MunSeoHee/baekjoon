@@ -29,7 +29,13 @@ int main(void) {
 	}
 	
 	cout << dp[case_count][value];
-
+	cout << endl;
+	for (int i = 0; i <= case_count; i++) {
+		for (int j = 0; j <= value; j++) {
+			cout << dp[i][j] << " ";
+		}
+		cout << endl;
+	}
 
 
 
